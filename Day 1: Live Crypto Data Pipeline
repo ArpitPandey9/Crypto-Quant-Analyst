@@ -1,16 +1,1 @@
-# File: day1_crypto_pipeline.py
-import requests
-import pandas as pd
 
-# Fetch Bitcoin data from CoinGecko API
-url = "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=90"
-response = requests.get(url)
-data = response.json()
-
-# Extract prices and convert to DataFrame
-prices = data['prices']
-df = pd.DataFrame(prices, columns=['timestamp', 'price'])
-
-# Save data to CSV
-df.to_csv("bitcoin_prices.csv", index=False)
-print("✅ Success! Saved 90 days of Bitcoin prices to bitcoin_prices.csv")
