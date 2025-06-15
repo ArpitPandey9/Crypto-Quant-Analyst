@@ -1,1 +1,1 @@
-# Crypto-Quant-S-P
+# Crypto-Quant-S&P
